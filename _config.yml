@@ -1,0 +1,38 @@
+# Setup
+title:        Search
+tagline:      ""
+baseurl:      "/search"
+repository:    vsoch/search
+github:       "https://github.com/expfactory/search"
+
+# Required alogia login (accounts are free)
+# These are nuder your Account settings, and are intended to be public facing
+alogia:
+  application_id: Z32ZL6F0ZP
+  api_key: badb6c6811f553feee41df24891e4c66
+
+# About/contact
+author:
+  name:       "@vsoch"
+  url:        https://expfactory.github.io/search
+
+# Collections
+collections:
+    issues:
+      output: false
+      permalink: /:collection/:title/
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+#Others
+markdown: kramdown
+
+plugins:
+  - github-pages
