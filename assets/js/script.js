@@ -8,7 +8,7 @@ $('.ais-RefinementList-checkbox').change(function() {
 
 
     // If nothing checked, just show them all
-    if (checkVals.length == 0)
+    if (checkVals.length == 0) {
         var selected = $(".ais-Hits-item");
 
     else {
