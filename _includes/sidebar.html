@@ -5,9 +5,9 @@
         <h2>Languages</h2>
         {% assign languages = site.github.public_repositories | map: 'language' | join: ','  | split: ',' | uniq %}
         <div id="language-list"><div class="ais-RefinementList"><ul class="ais-RefinementList-list">
-        {% for language in languages %}{% if language %}<li class="ais-RefinementList-item"><div><label class="ais-RefinementList-label"> <input type="checkbox" class="ais-RefinementList-checkbox" value="{{ language }}"> <span class="ais-RefinementList-labelText">{{ language }}</span></label></div></li>{% endif %}{% endfor %}</ul></div></div>
+        {% for language in languages %}{% if language != "" %}<li class="ais-RefinementList-item"><div><label class="ais-RefinementList-label"> <input type="checkbox" class="ais-RefinementList-checkbox" value="{{ language }}"> <span class="ais-RefinementList-labelText">{{ language }}</span></label></div></li>{% endif %}{% endfor %}</ul></div></div>
         <h2>License</h2>
         {% assign licenses = site.github.public_repositories | map: 'license' | map: 'spdx_id' | join: ','  | split: ',' | uniq %}
         <div id="licence-list"><div class="ais-RefinementList"><ul class="ais-RefinementList-list">
-        {% for license in licenses %}{% if license %}<li class="ais-RefinementList-item"><div><label class="ais-RefinementList-label"> <input type="checkbox" class="ais-RefinementList-checkbox" value="{{ license }}"> <span class="ais-RefinementList-labelText">{{ license }}</span></label></div></li>{% endif %}{% endfor %}</ul></div></div>
+        {% for license in licenses %}{% if license != "" %}<li class="ais-RefinementList-item"><div><label class="ais-RefinementList-label"> <input type="checkbox" class="ais-RefinementList-checkbox" value="{{ license }}"> <span class="ais-RefinementList-labelText">{{ license }}</span></label></div></li>{% endif %}{% endfor %}</ul></div></div>
         <div id="stats"><div class="ais-Stats"><span class="ais-Stats-text">76 results found in 1ms</span></div></div></div>
