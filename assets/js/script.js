@@ -7,7 +7,7 @@ $('.ais-RefinementList-checkbox').change(function() {
     }).get();
 
     // If nothing checked, just show them all
-    if (checkVals.length == 0) {
+    if (checkedVals.length == 0) {
         var selected = $(".ais-Hits-item");
     } else {
         // Filter elements on page
