@@ -10,7 +10,7 @@ excluded_in_search: true
 <div id="hits"><div><div class="ais-Hits"><ol class="ais-Hits-list">
 {% for repo in site.github.public_repositories %}
 
-<li class="ais-Hits-item"><div> <div class="hit-name"> 
+<li class="ais-Hits-item {{ repo.language }} {{ repo.license.spdx_id }}"><div> <div class="hit-name"> 
 <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></div>
 <dl> 
   <dt>Owner</dt>
@@ -20,7 +20,7 @@ excluded_in_search: true
 <div> <a target="_blank" href="{{ repo.html_url }}">Repository </a></div> 
 <div style=""> Created at: {{ repo.created_at | date: "%-d %B %Y"}}</div>
 <dl><dt>Stars</dt><dd>{{ repo.stargazers_count }}</dd> 
-    {% if repo.license %}<dt>License</dt><dd><a href="{{ repo.license.url }}" target="_blank">{{ repo.license.name}}</a></dd>{% endif %}
+    {% if repo.license %}<dt>License</dt><dd><a href="{{ repo.license.url }}" target="_blank">{{ repo.license.name }}</a></dd>{% endif %}
     <dt>Language</dt><dd>{{ repo.language }}</dd> 
     <dt>Updated</dt><dd> {{ repo.updated_at | date: "%-d %B %Y" }}</dd> 
     {% if repo.has_issues %}<dt>Issues</dt><dd><a href="{{ repo.html_url }}/issues" target="_blank">{{ repo.issues_count }} ({{ repo.open_issues_count }} open)</a></dd>{% endif %}
