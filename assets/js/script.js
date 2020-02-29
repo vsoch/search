@@ -6,12 +6,10 @@ $('.ais-RefinementList-checkbox').change(function() {
         return "." + this.value;
     }).get();
 
-
     // If nothing checked, just show them all
     if (checkVals.length == 0) {
         var selected = $(".ais-Hits-item");
-
-    else {
+    } else {
         // Filter elements on page
         var repos = $(".ais-Hits-item");
         repos.hide();
