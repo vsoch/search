@@ -15,7 +15,7 @@ $('.ais-RefinementList-checkbox').change(function() {
         repos.hide();
 
         // Only show those belonging to class
-        var classes = checkedVals.join(" ");
+        var classes = checkedVals.join(", ");
         var selected = $(classes);
     }
 
