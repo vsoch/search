@@ -33,6 +33,3 @@ excluded_in_search: true
 </div></li>
 
 {% endfor %}</ol></div></div></div>
-<div id="pagination"><div class="ais-Pagination"><ul class="ais-Pagination-list"><li class="ais-Pagination-item ais-Pagination-item--firstPage ais-Pagination-item--disabled"><span class="ais-Pagination-link">«</span></li><li class="ais-Pagination-item ais-Pagination-item--previousPage ais-Pagination-item--disabled"><span class="ais-Pagination-link">‹</span></li><li class="ais-Pagination-item ais-Pagination-item--page ais-Pagination-item--selected"><a class="ais-Pagination-link" aria-label="1" href="#">1</a></li><li class="ais-Pagination-item ais-Pagination-item--page"><a class="ais-Pagination-link" aria-label="2" href="#">2</a></li><li class="ais-Pagination-item ais-Pagination-item--page"><a class="ais-Pagination-link" aria-label="3" href="#">3</a></li><li class="ais-Pagination-item ais-Pagination-item--page"><a class="ais-Pagination-link" aria-label="4" href="#">4</a></li><li class="ais-Pagination-item ais-Pagination-item--nextPage"><a class="ais-Pagination-link" aria-label="Next" href="#">›</a></li><li class="ais-Pagination-item ais-Pagination-item--lastPage"><a class="ais-Pagination-link" aria-label="Last" href="#">»</a></li></ul></div></div>
-    </div>
-</div>
