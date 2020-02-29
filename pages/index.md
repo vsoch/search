@@ -16,8 +16,8 @@ excluded_in_search: true
   <dt>Owner</dt>
   <dd><a href="{{ repo.owner.html_url }}" target="_blank">{{ repo.owner.login }}</a><img src="{{ repo.owner.avatar_url }}" width="30px"></dd> 
 <dt>Description</dt><dd>{{ repo.description }}</dd> </dl> 
-<div style=""> {% if repo.homepage %}<a href="{{ repo.homepage }}">Homepage</a>{% endif %} </div>
-<div> <a href="{{ repo.html_url }}">Repository </a></div> 
+<div style=""> {% if repo.homepage %}<a target="_blank" href="{{ repo.homepage }}">Homepage</a>{% endif %} </div>
+<div> <a target="_blank" href="{{ repo.html_url }}">Repository </a></div> 
 <div style=""> Created at: {{ repo.created_at | date: "%-d %B %Y"}}</div>
 <dl><dt>Stars</dt><dd>{{ repo.stargazers_count }}</dd> 
     {% if repo.license %}<dt>License</dt><dd><a href="{{ repo.license.url }}" target="_blank">{{ repo.license.name}}</a></dd>{% endif %}
