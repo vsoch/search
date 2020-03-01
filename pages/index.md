@@ -10,8 +10,10 @@ excluded_in_search: true
 <div id="hits"><div><div class="ais-Hits"><ol class="ais-Hits-list">
 {% for repo in site.github.public_repositories %}
 
-<li class="ais-Hits-item {{ repo.language }} {{ repo.license.spdx_id }}"><div> <div class="hit-name"> 
-<a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></div>
+<li class="ais-Hits-item {{ repo.language }} {{ repo.license.spdx_id }}" 
+    data-description="{{ repo.description }}" data-language="{{ repo.language }}" data-license="{{ repo.license.name }}">
+<div><div class="hit-name"> 
+  <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></div>
 <dl> 
   <dt>Owner</dt>
   <dd><a href="{{ repo.owner.html_url }}" target="_blank">{{ repo.owner.login }}</a><img src="{{ repo.owner.avatar_url }}" width="30px"></dd> 

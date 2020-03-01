@@ -29,4 +29,22 @@ $('.ais-RefinementList-checkbox').change(function() {
 $( document ).ready(function() {
     var repos = $(".ais-Hits-item");
     $("#selected-count").text(repos.length);
+
+    $(".ais-SearchBox-input").off();
+    $(".ais-SearchBox-input").on("input", function(e) {
+      var input = $(this);
+      var query = input.val().toLowerCase();
+
+      // Only update if different
+      if (input.data("lastval") != query) {
+        input.data("lastval", query);
+
+        // Hide those without term
+        repos.show().filter(function() {
+          text = $(repo).attr("data-desecription") + " " + $(repo).attr("data-language") + " " + $(repo).attr("data-license");
+          text = text.replace(/\s+/g, ' ');
+          return !text.toLowerCase().includes(query);
+        }).hide();
+     }
+   });
 });
