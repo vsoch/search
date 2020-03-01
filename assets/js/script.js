@@ -41,7 +41,7 @@ $( document ).ready(function() {
 
         // Hide those without term
         repos.show().filter(function() {
-          text = $(this).attr("data-desecription") + " " + $(this).attr("data-language") + " " + $(this).attr("data-license");
+          text = $(this).attr("data-description") + " " + $(this).attr("data-language") + " " + $(this).attr("data-license");
           text = text.replace(/\s+/g, ' ');
           return !text.toLowerCase().includes(query);
         }).hide();
