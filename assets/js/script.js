@@ -46,13 +46,13 @@ $( document ).ready(function() {
         input.data("lastval", query);
 
         // Hide those without term
-        selected = repos.show().filter(function() {
+        repos.show().filter(function() {
           text = $(this).attr("data-description") + " " + $(this).attr("data-language") + " " + $(this).attr("data-license");
           text = text.replace(/\s+/g, ' ');
           return !text.toLowerCase().includes(query);
         }).hide();
 
-        $("#selected-count").text(selected.length);
+        $("#selected-count").text($('.ais-Hits-item:visible').length);
      }
    });
 });
