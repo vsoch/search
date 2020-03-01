@@ -28,6 +28,9 @@ $('.ais-RefinementList-checkbox').change(function() {
 // Add number of repos that we start with
 $( document ).ready(function() {
 
+    // Ensure we are at the top
+    window.scrollTo(0, 0);
+
     // Ensure any cached checks are cleared
     $('input:checkbox').prop('checked', false)
 

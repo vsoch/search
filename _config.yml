@@ -1,16 +1,10 @@
 # Setup
 title:        vsoch/search
-tagline:      ""
 baseurl:      "/search"
 repository:    vsoch/search
 
 # Scrolltop color
 scrolltop_color: "#fd1268"
-
-# About/contact
-author:
-  name:       "@vsoch"
-  url:        https://expfactory.github.io/search
 
 # Collections
 collections:
