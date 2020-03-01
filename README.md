@@ -4,7 +4,7 @@
 
 This is an interface that uses GitHub pages and the API that is provided there to 
 render a searchable interface of repositories for an individual or organization.
-See [this post]() for a review of how it works.
+See [this post](https://vsoch.github.io/2020/github-search/) for a review of how it works.
 
 ## Usage
 
