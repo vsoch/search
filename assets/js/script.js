@@ -27,6 +27,10 @@ $('.ais-RefinementList-checkbox').change(function() {
 
 // Add number of repos that we start with
 $( document ).ready(function() {
+
+    // Ensure any cached checks are cleared
+    $('input:checkbox').prop('checked', false)
+
     var repos = $(".ais-Hits-item");
     $("#selected-count").text(repos.length);
 
