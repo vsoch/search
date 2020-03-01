@@ -1,0 +1,29 @@
+name: render-weekly
+
+on:
+  schedule:
+    # Weekly on Thursday
+    - cron: 0 0 * * 4
+
+jobs:
+  re-render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Push empty commit to trigger site render
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: "master"
+        run: |
+          echo "GitHub Actor: ${GITHUB_ACTOR}"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git branch
+
+          git checkout "${BRANCH}"
+          git pull "${BRANCH}"
+          git branch
+
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git commit -m "Automated push of empty commit to re-render site $(date '+%Y-%m-%d')" || exit 0
+          git push origin "${BRANCH}"
