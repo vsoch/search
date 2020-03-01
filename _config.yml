@@ -4,11 +4,8 @@ tagline:      ""
 baseurl:      "/search"
 repository:    vsoch/search
 
-# Required alogia login (accounts are free)
-# These are nuder your Account settings, and are intended to be public facing
-alogia:
-  application_id: Z32ZL6F0ZP
-  api_key: badb6c6811f553feee41df24891e4c66
+# Scrolltop color
+scrolltop_color: "#fd1268"
 
 # About/contact
 author:
