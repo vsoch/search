@@ -20,7 +20,7 @@ jobs:
           git branch
 
           git checkout "${BRANCH}"
-          git pull "${BRANCH}"
+          git pull origin "${BRANCH}"
           git branch
 
           git config --global user.name "github-actions"
