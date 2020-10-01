@@ -25,5 +25,5 @@ jobs:
 
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@users.noreply.github.com"
-          git commit -m "Automated push of empty commit to re-render site $(date '+%Y-%m-%d')" || exit 0
+          git commit --allow-empty -m "Automated push of empty commit to re-render site $(date '+%Y-%m-%d')" || exit 0
           git push origin "${BRANCH}"
